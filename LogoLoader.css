@@ -1,0 +1,35 @@
+﻿.logo-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* تعریف انیمیشن چرخش با شتاب متغیر */
+@keyframes spin-ease {
+    /* 0% تا 10% : ثابت (معادل 0 تا 0.2 ثانیه در یک انیمیشن 2 ثانیه ای) */
+    0%, 10% {
+        transform: rotate(0deg);
+    }
+    /* 10% تا 50% : چرخش با شتاب افزایشی (معادل 0.2 تا 1 ثانیه) */
+    50% {
+        transform: rotate(360deg);
+        animation-timing-function: ease-in; /* شتاب افزایشی */
+    }
+    /* 50% تا 90% : ادامه چرخش با شتاب کاهشی (معادل 1 تا 1.8 ثانیه) */
+    90% {
+        transform: rotate(720deg);
+        animation-timing-function: ease-out; /* شتاب کاهشی */
+    }
+    /* 90% تا 100% : ثابت (معادل 1.8 تا 2 ثانیه) */
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.pulsing-logo {
+    width: 100px;
+    height: 100px;
+    /* اعمال انیمیشن چرخش با زمان 2 ثانیه */
+    animation: spin-ease 2s infinite linear;
+}
