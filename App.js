@@ -1,5 +1,6 @@
 ﻿import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// BrowserRouter از اینجا حذف شد
+import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -20,7 +21,8 @@ function App() {
     const auth = useAuth();
 
     return (
-        <BrowserRouter>
+        // تگ BrowserRouter از اینجا حذف شد
+        <>
             <CssBaseline />
             <Header />
             <Box
@@ -47,7 +49,7 @@ function App() {
                 </Routes>
             </Box>
             <BottomNav />
-        </BrowserRouter>
+        </> // تگ BrowserRouter از اینجا حذف شد و از یک Fragment <> استفاده کردیم
     );
 }
 

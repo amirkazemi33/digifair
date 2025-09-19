@@ -9,26 +9,19 @@
     }
   },
   "profiles": {
-    "http": {
+    // این پروفایل اصلی برای اجرای پروژه با دستور dotnet run است
+    "Digifair.API.New": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:7274",
+      // تغییر اصلی اینجاست: یک آدرس HTTP و یک آدرس HTTPS
+      "applicationUrl": "https://localhost:7274;http://localhost:7274",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7279",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
+    // این پروفایل برای اجرا با IIS Express در Visual Studio است
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
